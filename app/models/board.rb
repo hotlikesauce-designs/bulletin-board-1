@@ -8,6 +8,8 @@
 #  updated_at :datetime         not null
 #
 class Board < ApplicationRecord
+  validates(:name,{:presence => true, :uniqueness => true})
+
   has_many :posts
 
   scope :all_active_posts, -> { joins(:posts).merge(Post.active_or_expired) }
