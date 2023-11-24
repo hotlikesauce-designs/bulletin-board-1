@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Routes for the Post resource:
 
   # CREATE
-  post("/insert_post", { :controller => "posts", :action => "create" })
+  post("/insert_post", { :controller => "posts", :action => "create"})
           
   # READ
   get("/posts", { :controller => "posts", :action => "index" })
